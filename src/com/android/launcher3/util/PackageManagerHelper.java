@@ -59,11 +59,11 @@ public class PackageManagerHelper {
         // The value of FLAG_SUSPENDED was reused by a hidden constant
         // ApplicationInfo.FLAG_PRIVILEGED prior to N, so only check for suspended flag on N
         // or later.
-        if (Utilities.ATLEAST_N) {
-            return (info.flags & FLAG_SUSPENDED) != 0;
-        } else {
+        //if (Utilities.ATLEAST_N) {
+        //    return (info.flags & FLAG_SUSPENDED) != 0;
+        //} else {
             return false;
-        }
+        //}
     }
     /**
      * Returns true if {@param srcPackage} has the permission required to start the activity from

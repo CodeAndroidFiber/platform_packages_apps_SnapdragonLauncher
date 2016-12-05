@@ -591,12 +591,14 @@ public class Launcher extends Activity
             showFirstRunClings();
         }
 
-        Intent intent = new Intent();
-        ComponentName componentName = new ComponentName(LAUNCHER_UNREAD_SERVICE_PACKAGENAME,
-                LAUNCHER_UNREAD_SERVICE_CLASSNAME);
-        intent.setComponent(componentName);
-        final Intent eintent = new Intent(Utilities.createExplicitFromImplicitIntent(this, intent));
-        bindService(eintent, mConnection, Context.BIND_AUTO_CREATE);
+	if(mIconCache.getAppIconReload()) {
+            Intent intent = new Intent();
+            ComponentName componentName = new ComponentName(LAUNCHER_UNREAD_SERVICE_PACKAGENAME,
+                        LAUNCHER_UNREAD_SERVICE_CLASSNAME);
+            intent.setComponent(componentName);
+            final Intent eintent = new Intent(Utilities.createExplicitFromImplicitIntent(this, intent));
+            bindService(eintent, mConnection, Context.BIND_AUTO_CREATE);
+        }
     }
 
     @Override

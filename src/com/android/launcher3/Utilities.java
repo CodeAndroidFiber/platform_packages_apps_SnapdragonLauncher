@@ -96,7 +96,7 @@ public final class Utilities {
     private static final int[] sLoc1 = new int[2];
 
     // TODO: use the full N name (e.g. ATLEAST_N*****) when available
-    public static final boolean ATLEAST_N = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N;
+    //public static final boolean ATLEAST_N = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N;
 
     public static final boolean ATLEAST_MARSHMALLOW =
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
